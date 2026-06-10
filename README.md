@@ -1,13 +1,22 @@
 # PeakPick Identity Service
 
-Owns demo users, stores, and bearer-token authentication.
+Identity Service là microservice quản lý tài khoản demo, cửa hàng, vai trò và token đăng nhập.
 
-Owned database tables:
+## Database Riêng
+
+Service này sở hữu database `peakpick_identity` với các bảng:
 
 - `stores`
 - `identity_users`
 
-Run locally:
+## Trách Nhiệm
+
+- Đăng nhập bằng tài khoản demo.
+- Cấp bearer token.
+- Trả thông tin người dùng hiện tại.
+- Không xử lý đơn hàng, sản phẩm hoặc slot.
+
+## Chạy Local
 
 ```bash
 pip install -r requirements.txt
